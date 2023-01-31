@@ -14,36 +14,34 @@ function Nav() {
       const router = useRouter();
 
   return (
-    <div className="w-full flex justify-center py-10">
-      <div className="flex w-3/4 justify-between text-base">
-        <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
-          {`~${router.asPath}`}{" "}
-          <Typewriter
-            options={{
-              strings: [],
-              autoStart: true,
-              loop: true,
-            }}
-          />
-        </div>
-        <div className="flex items-center text-base leading-5">
-          <div className="hidden sm:block">
-            {headerNavLinks.map((link) => (
-              <Link
-                key={link.title}
-                href={link.href}
-                className="link-underline rounded py-1 px-2 text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:py-2 sm:px-3"
-              >
-                {link.title}
-              </Link>
-            ))}
-          </div>
-          <CommandPalette navigation={navigation} />
-          <ThemeSwitch />
-          <DropMenu />
-        </div>
+    <>
+      <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
+        {`~${router.asPath}`}{" "}
+        <Typewriter
+          options={{
+            strings: [],
+            autoStart: true,
+            loop: true,
+          }}
+        />
       </div>
-    </div>
+      <div className="flex items-center text-base leading-5">
+        <div className="hidden sm:block">
+          {headerNavLinks.map((link) => (
+            <Link
+              key={link.title}
+              href={link.href}
+              className="link-underline rounded py-1 px-2 text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:py-2 sm:px-3"
+            >
+              {link.title}
+            </Link>
+          ))}
+        </div>
+        <CommandPalette navigation={navigation} />
+        <ThemeSwitch />
+        <DropMenu />
+      </div>
+    </>
   );
 }
 
