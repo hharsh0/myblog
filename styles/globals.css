@@ -105,3 +105,41 @@ a {
     color-scheme: dark;
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes blink {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+.blinking-cursor{
+  animation-name: blink;
+	animation-duration: 1200ms;
+	animation-iteration-count: infinite;
+}
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #d946ef, #ec4899);
+  transition: width 0.25s ease;
+  -webkit-transition: width 0.25s ease;
+}
+
+.link-underline:hover:after {
+  width: 100%;
+  left: 0;
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #d946ef, #ec4899);
+}
