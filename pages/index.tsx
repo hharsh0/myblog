@@ -39,7 +39,7 @@ export default function Home() {
               {`Welcome to My Blog. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
               side projects and learning new technologies.
             </h2>
-            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
+            <p className="pt-5 text-lg relative leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
               This is my place for{" "}
               <RoughNotation
                 animate={true}
