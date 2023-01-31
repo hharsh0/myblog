@@ -2,7 +2,7 @@ import supabase from '../config/supabaseClient'
 import { useState, useEffect } from 'react'
 import { RoughNotation } from "react-rough-notation";
 import Link from 'next/link';
-import LatestArticle from '@/components/LatestArticle';
+import LatestArticle from '@/components/ArticleCard';
 
 
 export default function Home() {
@@ -42,13 +42,12 @@ export default function Home() {
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
               This is my place for{" "}
               <RoughNotation
-                animate="true"
+                animate={true}
                 type="box"
                 show={true}
                 color="#DE1D8D"
                 animationDelay={1000}
                 animationDuration={2500}
-                className="text-slate-200"
               >
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
@@ -57,13 +56,12 @@ export default function Home() {
             <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               This is my place for{" "}
               <RoughNotation
-                animate="true"
+                animate={true}
                 type="highlight"
                 show={true}
                 color="#DE1D8D"
                 animationDelay={1000}
                 animationDuration={2500}
-                className="text-slate-200"
               >
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
@@ -117,7 +115,7 @@ export default function Home() {
               <div className="my-2 grid items-start gap-8">
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-fuchsia-600 to-emerald-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                  <Link href="https://parthdesai.vercel.app/">
+                  <Link href="">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg
@@ -148,7 +146,7 @@ export default function Home() {
               <div className="my-2 grid items-start gap-8">
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r  from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
-                  <Link href="https://parthdesai.vercel.app/resume.pdf">
+                  <Link href="">
                     <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg
