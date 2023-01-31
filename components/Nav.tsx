@@ -4,13 +4,27 @@ import Link from 'next/link';
 import { navigation } from '@/data/nav'
 import CommandPalette from './CommandPalette';
 import ThemeSwitch from './ThemeSwitch';
+import DropMenu from './DropMenu';
+import { useRouter } from "next/router";
+import Typewriter from "typewriter-effect";
+
+
 
 function Nav() {
+      const router = useRouter();
+
   return (
-    <div className="w-full flex justify-center py-6">
+    <div className="w-full flex justify-center py-10">
       <div className="flex w-3/4 justify-between text-base">
-        <div className="p-4">
-          ~/ <span className="blinking-cursor">|</span>
+        <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
+          {`~${router.asPath}`}{" "}
+          <Typewriter
+            options={{
+              strings: [],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </div>
         <div className="flex items-center text-base leading-5">
           <div className="hidden sm:block">
@@ -26,6 +40,7 @@ function Nav() {
           </div>
           <CommandPalette navigation={navigation} />
           <ThemeSwitch />
+          <DropMenu />
         </div>
       </div>
     </div>
