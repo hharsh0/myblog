@@ -2,6 +2,7 @@ import supabase from '../config/supabaseClient'
 import { useState, useEffect } from 'react'
 import { RoughNotation } from "react-rough-notation";
 import Link from 'next/link';
+import LatestArticle from '@/components/LatestArticle';
 
 
 export default function Home() {
@@ -179,6 +180,22 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
+          Latest
+        </h2>
+        <hr className="border-gray-200 dark:border-gray-700" />
+        {/* link to article */}
+        <LatestArticle />
+        <LatestArticle />
+        <div className="flex justify-end pt-5 text-lg font-normal leading-6">
+          <Link
+            href="/blog"
+            className=" special-underline-new text-primary-500 hover:text-gray-100 hover:no-underline dark:text-[#DE1D8D] hover:dark:text-gray-100"
+            aria-label="all posts"
+          >
+            All Posts &rarr;
+          </Link>
         </div>
       </div>
     </>
