@@ -1,3 +1,4 @@
+import Tag from "./Tag";
 
 
 function LatestArticle() {
@@ -26,9 +27,7 @@ function LatestArticle() {
                   </h2>
                 </div>
                 <div className="flex flex-wrap">
-                  {/* {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))} */}
+                  <Tag />
                 </div>
                 <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
                   summary
