@@ -132,3 +132,23 @@ body {
   left: 0;
   background: linear-gradient(transparent, transparent), linear-gradient(to right, #d946ef, #ec4899);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+::-moz-selection {
+  background: #de1d8d;
+}
+::-webkit-selection {
+  background: #de1d8d;
+}
+::selection {
+  background: #de1d8d;
+}
+
