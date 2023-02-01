@@ -7,13 +7,12 @@ function Card() {
         <div className="p-6">
           <div className="flex flex-row items-center justify-between">
             <div className="my-2">
-              {/* <FolderIcon /> */}
               <div className="h-10 w-10 text-[#DE1D8D] dark:text-[#DE1D8D]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   role="img"
                   viewBox="0 0 24 24"
-                  fill="none"
+                  fill="none" 
                   stroke="currentColor"
                   strokeWidth="1"
                   strokeLinecap="round"
