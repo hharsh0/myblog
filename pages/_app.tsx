@@ -4,7 +4,8 @@ import Head from "next/head";
 import LayoutWrapper from '@/components/LayoutWrapper';
 import { useRouter } from "next/router";
 import LoadingBar from "react-top-loading-bar";
-import {useState,useEffect} from 'react'
+import { useState, useEffect } from 'react'
+
 
 
 
@@ -15,12 +16,14 @@ export default function App({ Component, pageProps }: AppProps) {
   const [progress, setProgress] = useState(0);
 
   let routeName = router.pathname.substr(1);
-  console.log(routeName.length)
   if (routeName.length === 0) { 
     routeName = "Home";
   }
 
   useEffect(() => { 
+    router.events.on("routeChangeStart", () => {
+      setProgress(40);
+    });
     router.events.on('routeChangeComplete', () => {
       setProgress(100)
     });
