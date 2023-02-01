@@ -2,9 +2,12 @@ import { AiOutlineGithub } from 'react-icons/ai'
 
 function Card() {
   return (
-    <div className="md p-4 md:w-1/2" style={{ maxWidth: "544px" }}>
-      <div className="h-full transform overflow-hidden rounded-md border-2 border-solid border-gray-200 bg-transparent bg-opacity-20 transition duration-500 hover:scale-105 hover:rounded-md hover:border-[#DE1D8D] hover:bg-gray-300 dark:border-gray-700 dark:hover:border-[#DE1D8D] dark:hover:bg-gray-800">
-        <div className="p-6">
+    <div
+      className="md p-4 w-full md:w-1/2 shrink-0"
+      style={{ maxWidth: "544px" }}
+    >
+      <div className="h-full transform overflow-hidden rounded-md border-2 border-solid border-gray-200 bg-transparent bg-opacity-20 transition duration-500 hover:scale-105 hover:rounded-md hover:border-[#DE1D8D] hover:bg-gray-300 dark:border-gray-700 dark:hover:border-[#DE1D8D] dark:hover:bg-gray-800 shrink-0">
+        <div className="p-6 shrink-0">
           <div className="flex flex-row items-center justify-between">
             <div className="my-2">
               <div className="h-10 w-10 text-[#DE1D8D] dark:text-[#DE1D8D]">
@@ -12,7 +15,7 @@ function Card() {
                   xmlns="http://www.w3.org/2000/svg"
                   role="img"
                   viewBox="0 0 24 24"
-                  fill="none" 
+                  fill="none"
                   stroke="currentColor"
                   strokeWidth="1"
                   strokeLinecap="round"
