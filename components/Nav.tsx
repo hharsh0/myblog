@@ -15,7 +15,7 @@ function Nav() {
 
   return (
     <>
-      <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
+      <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold cursor-pointer">
         {`~${router.asPath}`}{" "}
         <Typewriter
           options={{
